@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#0b0e14" />
+    <meta name="apple-mobile-web-app-title" content="The Sump" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="icon" type="image/png" href="icons/favicon-64.png" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <title>The Sump</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #05070b;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        touch-action: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      #game-root {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Keep the FIT-centered canvas clear of notches and rounded corners on
+           full-bleed phones (viewport-fit=cover above exposes these insets). */
+        box-sizing: border-box;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right)
+                 env(safe-area-inset-bottom) env(safe-area-inset-left);
+      }
+      canvas {
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+    </style>
+    <script type="module" crossorigin src="/the-sump-game/assets/index-BoHDmEbz.js"></script>
+    <link rel="modulepreload" crossorigin href="/the-sump-game/assets/vendor-phaser-CaWnzXme.js">
+  <link rel="manifest" href="/the-sump-game/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/the-sump-game/registerSW.js"></script></head>
+  <body>
+    <div id="game-root"></div>
+  </body>
+</html>

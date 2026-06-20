@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/the-sump-game/sw.js', { scope: '/the-sump-game/' })})}
